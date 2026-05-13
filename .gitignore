@@ -1,0 +1,91 @@
+# ── Python ─────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ── Virtual Environments ───────────────────────────────────
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ── IDE ─────────────────────────────────────────────────── 
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Testing ────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# ── Jupyter ────────────────────────────────────────────────
+.ipynb_checkpoints
+*.ipynb
+
+# ── ML Models (large files) ────────────────────────────────
+ml_models/saved/*.pkl
+ml_models/saved/*.h5
+ml_models/saved/*.keras
+ml_models/saved/*.joblib
+
+# ── Uploads & Generated Files ──────────────────────────────
+uploads/
+reports/generated/
+reports/charts/
+logs/
+
+# ── Docker ─────────────────────────────────────────────────
+.dockerignore
+
+# ── Database ───────────────────────────────────────────────
+*.sqlite3
+*.db
+
+# ── FAISS Index ────────────────────────────────────────────
+*.index
+faiss_index/
+
+# ── Temp ───────────────────────────────────────────────────
+tmp/
+temp/
+.tmp/
+*.tmp
+
+# ── Keep these dirs ────────────────────────────────────────
+!ml_models/saved/.gitkeep
+!uploads/.gitkeep
+!reports/generated/.gitkeep
+!logs/.gitkeep
+
+AGENT.md
+CLAUDE.md
+.agent-mem/

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizRithm | AI Business Consultant</title>
+    <meta name="description" content="An intelligent AI-powered business analytics platform. Upload data, forecast trends, and get actionable insights.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">⬡</span> BizRithm
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#tech-stack">Tech Stack</a></li>
+            </ul>
+            <a href="http://localhost:8501" class="btn btn-primary" target="_blank">Launch App <i class="fa-solid fa-arrow-right"></i></a>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        
+        <div class="hero-container">
+            <div class="badge fade-up">
+                <span class="badge-dot"></span>
+                Powered by Google Gemini 1.5
+            </div>
+            <h1 class="hero-title fade-up delay-1">
+                Meet Your New <br>
+                <span class="text-gradient">AI Business Consultant</span>
+            </h1>
+            <p class="hero-subtitle fade-up delay-2">
+                Upload your business data and interact with an intelligent AI that analyzes performance, predicts trends, generates insights, and creates professional reports — all in real time.
+            </p>
+            <div class="hero-cta fade-up delay-3">
+                <a href="http://localhost:8501" class="btn btn-lg btn-glow" target="_blank">
+                    <i class="fa-solid fa-rocket"></i> Try the Live Demo
+                </a>
+                <a href="#features" class="btn btn-lg btn-outline">Explore Features</a>
+            </div>
+            
+            <!-- Hero Mockup graphic -->
+            <div class="hero-mockup fade-up delay-4">
+                <div class="mockup-header">
+                    <div class="mac-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="mockup-title">BizRithm Dashboard</div>
+                </div>
+                <div class="mockup-body">
+                    <div class="mockup-sidebar">
+                        <div class="m-nav active"></div>
+                        <div class="m-nav"></div>
+                        <div class="m-nav"></div>
+                        <div class="m-nav"></div>
+                    </div>
+                    <div class="mockup-content">
+                        <div class="m-kpi-row">
+                            <div class="m-kpi"><div class="m-val"></div><div class="m-line"></div></div>
+                            <div class="m-kpi"><div class="m-val"></div><div class="m-line"></div></div>
+                            <div class="m-kpi"><div class="m-val"></div><div class="m-line"></div></div>
+                        </div>
+                        <div class="m-chart-row">
+                            <div class="m-chart-main">
+                                <div class="m-chart-bars"></div>
+                            </div>
+                            <div class="m-chart-side">
+                                <div class="m-ai-box">
+                                    <i class="fa-solid fa-robot"></i>
+                                    <div class="m-ai-lines">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <h2 class="section-title">An Entire Analytics Team <span class="text-gradient">in One Platform</span></h2>
+                <p class="section-desc">BizRithm uses a multi-agent architecture to handle complex data tasks autonomously.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>Multi-Agent Orchestration</h3>
+                    <p>The core brain of BizRithm. An intelligent router that delegates tasks to specialized sub-agents (SQL, Chat, Forecasting) for maximum accuracy and speed.</p>
+                </div>
+                <div class="feature-card reveal delay-1">
+                    <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3>Conversational AI Chat</h3>
+                    <p>Chat directly with your business data. Powered by Gemini 1.5, the AI maintains session memory and provides context-aware strategic advice instantly.</p>
+                </div>
+                <div class="feature-card reveal delay-2">
+                    <div class="feature-icon"><i class="fa-solid fa-database"></i></div>
+                    <h3>NL to SQL Engine</h3>
+                    <p>Stop writing complex queries manually. Our agent safely translates natural language questions into executable PostgreSQL queries with strict data sanitization.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>ML Forecasting Registry</h3>
+                    <p>Automatically predict future trends. The system evaluates 5 ML models (Prophet, XGBoost, Random Forest, etc.) to select the most accurate forecast for your metrics.</p>
+                </div>
+                <div class="feature-card reveal delay-1">
+                    <div class="feature-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h3>Automated Business Insights</h3>
+                    <p>The analytics engine automatically calculates KPIs, identifies seasonal trends, and flags statistical anomalies using advanced Z-score detection.</p>
+                </div>
+                <div class="feature-card reveal delay-2">
+                    <div class="feature-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h3>Live Interactive Dashboards</h3>
+                    <p>Stunning, responsive data visualizations built with Plotly and a premium dark glassmorphism UI. Track your performance across regions, products, and time.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                    <h3>PDF Report Generation</h3>
+                    <p>Generate comprehensive, board-ready PDF reports with a single click. Includes AI-generated executive summaries and high-impact strategic recommendations.</p>
+                </div>
+                <div class="feature-card reveal delay-1">
+                    <div class="feature-icon"><i class="fa-solid fa-file-csv"></i></div>
+                    <h3>Data Upload & Management</h3>
+                    <p>Seamlessly ingest your business datasets via drag-and-drop. Supports CSV, Excel, and JSON formats with an integrated data explorer and statistical summaries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section bg-darker">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <h2 class="section-title">How It <span class="text-gradient">Works</span></h2>
+                <p class="section-desc">From raw data to actionable intelligence in 3 simple steps.</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step reveal">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Upload Your Data</h3>
+                        <p>Drag and drop your CSV, Excel, or JSON files. The system automatically cleans, categorizes, and ingests your data into a secure PostgreSQL database.</p>
+                    </div>
+                </div>
+                
+                <div class="step-connector reveal"></div>
+                
+                <div class="step reveal delay-1">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>AI Analyzes & Learns</h3>
+                        <p>The multi-agent orchestration layer kicks in. It calculates KPIs, detects anomalies, and trains machine learning models on your dataset in the background.</p>
+                    </div>
+                </div>
+                
+                <div class="step-connector reveal delay-1"></div>
+                
+                <div class="step reveal delay-2">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Discover & Decide</h3>
+                        <p>Explore the interactive dashboard, chat with the AI consultant, run future forecasts, and export professional reports to drive your business forward.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Built with <span class="text-gradient">Modern Tech</span></h2>
+                <p class="section-desc">A production-ready stack designed for scale, speed, and security.</p>
+            </div>
+            
+            <div class="tech-grid reveal">
+                <div class="tech-item">
+                    <i class="fa-brands fa-python"></i>
+                    <span>Python 3.11</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>FastAPI</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Streamlit</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-solid fa-database"></i>
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-google"></i>
+                    <span>Gemini AI</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-solid fa-brain"></i>
+                    <span>Scikit-Learn</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-docker"></i>
+                    <span>Docker</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-solid fa-chart-area"></i>
+                    <span>Plotly</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">⬡</span> BizRithm
+                    </a>
+                    <p>The next-generation AI business consultant platform. Turning complex data into clear decisions.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How it works</a></li>
+                        <li><a href="http://localhost:8501">Live Demo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">GitHub Repo</a></li>
+                        <li><a href="#">Architecture</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BizRithm. Built for Final Year Projects & MVPs.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

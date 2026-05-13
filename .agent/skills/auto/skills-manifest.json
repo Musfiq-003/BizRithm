@@ -1,0 +1,13 @@
+{
+  "project": {
+    "enabled": true,
+    "lastGenerated": "2026-05-13T21:28:07.692Z",
+    "observationCount": 167,
+    "skillCount": 0,
+    "domain": "project",
+    "triggerGlobs": [
+      "**/*"
+    ],
+    "description": "Project for BizRithm. 19 gotchas, 138 conventions."
+  }
+}
