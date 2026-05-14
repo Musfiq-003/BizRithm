@@ -1,0 +1,7 @@
+{
+  "name": "bizrithm-deploy",
+  "private": true,
+  "scripts": {
+    "build": "cd frontend_react && npm install && npm run build"
+  }
+}

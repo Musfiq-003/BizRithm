@@ -1,21 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "frontend_react/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/frontend_react/dist/$1"
-    }
-  ]
+  "buildCommand": "npm run build",
+  "outputDirectory": "frontend_react/dist",
+  "framework": "vite"
 }
