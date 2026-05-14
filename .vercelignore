@@ -1,0 +1,10 @@
+*.py
+requirements.txt
+backend/
+ml_models/
+analytics/
+agents/
+data/
+docker/
+database/
+utils/
