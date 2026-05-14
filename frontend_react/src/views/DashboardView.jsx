@@ -69,19 +69,19 @@ export default function DashboardView() {
   return (
     <div className="space-y-6">
       {/* Top Header */}
-      <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight glow-text mb-1">Command Center</h1>
-          <p className="text-zinc-400">Live analytics and AI insights for your business.</p>
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight glow-text mb-1">Command Center</h1>
+          <p className="text-sm sm:text-base text-zinc-400">Live analytics and AI insights.</p>
         </div>
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
           {/* Global Date Range */}
-          <div className="flex items-center bg-zinc-900 border border-card-border rounded-lg px-3 py-2">
-            <Calendar size={16} className="text-zinc-400 mr-2" />
+          <div className="flex items-center bg-zinc-900 border border-card-border rounded-lg px-2 sm:px-3 py-1.5 sm:py-2">
+            <Calendar size={14} className="text-zinc-400 mr-2" />
             <select 
               value={dateRange}
               onChange={(e) => setDateRange(e.target.value)}
-              className="bg-transparent text-sm font-medium text-zinc-100 outline-none focus:ring-0 cursor-pointer"
+              className="bg-transparent text-xs sm:text-sm font-medium text-zinc-100 outline-none focus:ring-0 cursor-pointer"
             >
               <option>Today</option>
               <option>Last 7 Days</option>
@@ -91,20 +91,22 @@ export default function DashboardView() {
             </select>
           </div>
 
-          <button 
-            onClick={handleExport} disabled={isExporting}
-            className="flex items-center gap-2 px-4 py-2 bg-[#121212] border border-card-border rounded-lg text-sm font-medium hover:bg-zinc-800 transition disabled:opacity-70"
-          >
-            {exportDone ? <Check size={16} className="text-emerald-400" /> : <Download size={16} className={isExporting ? "animate-bounce" : ""} />}
-            <span className="hidden sm:inline">{isExporting ? "Exporting..." : exportDone ? "Exported!" : "Export CSV"}</span>
-          </button>
-          <button 
-            onClick={handleSync} disabled={isSyncing}
-            className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary-hover shadow-[0_0_15px_rgba(99,102,241,0.4)] transition disabled:opacity-70 disabled:shadow-none"
-          >
-            {syncDone ? <Check size={16} /> : <RefreshCw size={16} className={isSyncing ? "animate-spin" : ""} />}
-            <span className="hidden sm:inline">{isSyncing ? "Syncing..." : syncDone ? "Synced!" : "Trigger Sync"}</span>
-          </button>
+          <div className="flex gap-2">
+            <button 
+              onClick={handleExport} disabled={isExporting}
+              className="flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-[#121212] border border-card-border rounded-lg text-xs sm:text-sm font-medium hover:bg-zinc-800 transition disabled:opacity-70"
+            >
+              {exportDone ? <Check size={14} className="text-emerald-400" /> : <Download size={14} className={isExporting ? "animate-bounce" : ""} />}
+              <span className="hidden xs:inline">{isExporting ? "..." : exportDone ? "Done" : "Export"}</span>
+            </button>
+            <button 
+              onClick={handleSync} disabled={isSyncing}
+              className="flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-primary text-white rounded-lg text-xs sm:text-sm font-medium hover:bg-primary-hover shadow-[0_0_15px_rgba(99,102,241,0.4)] transition disabled:opacity-70 disabled:shadow-none"
+            >
+              {syncDone ? <Check size={14} /> : <RefreshCw size={14} className={isSyncing ? "animate-spin" : ""} />}
+              <span className="hidden xs:inline">{isSyncing ? "..." : syncDone ? "Synced" : "Sync"}</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -138,11 +140,11 @@ export default function DashboardView() {
           {/* Main Revenue Area Chart */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
-            className="glass-panel p-6 h-[350px] flex flex-col"
+            className="glass-panel p-4 sm:p-6 h-[300px] sm:h-[350px] flex flex-col"
           >
-            <div className="flex justify-between items-center mb-6">
-              <h2 className="text-base font-semibold text-zinc-100 flex items-center gap-2">
-                <TrendingUp size={18} className="text-primary" /> Revenue Trajectory
+            <div className="flex justify-between items-center mb-4 sm:mb-6">
+              <h2 className="text-sm sm:text-base font-semibold text-zinc-100 flex items-center gap-2">
+                <TrendingUp size={16} className="text-primary" /> Revenue Trajectory
               </h2>
             </div>
             <div className="flex-1 w-full min-h-0">
@@ -155,10 +157,10 @@ export default function DashboardView() {
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#27272a" />
-                  <XAxis dataKey="name" stroke="#52525b" fontSize={11} tickLine={false} axisLine={false} />
-                  <YAxis stroke="#52525b" fontSize={11} tickLine={false} axisLine={false} tickFormatter={(v) => `$${v}`} />
+                  <XAxis dataKey="name" stroke="#52525b" fontSize={10} tickLine={false} axisLine={false} />
+                  <YAxis stroke="#52525b" fontSize={10} tickLine={false} axisLine={false} tickFormatter={(v) => `$${v}`} />
                   <Tooltip 
-                    contentStyle={{ backgroundColor: '#18181b', border: '1px solid #27272a', borderRadius: '8px', fontSize: '12px' }}
+                    contentStyle={{ backgroundColor: '#18181b', border: '1px solid #27272a', borderRadius: '8px', fontSize: '10px' }}
                     itemStyle={{ color: '#6366f1' }}
                   />
                   <Area type="monotone" dataKey="value" stroke="#6366f1" strokeWidth={2} fillOpacity={1} fill="url(#colorValue)" />
@@ -172,17 +174,17 @@ export default function DashboardView() {
             {/* Regional Bar Chart */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}
-              className="glass-panel p-5 h-[280px] flex flex-col"
+              className="glass-panel p-4 sm:p-5 h-[250px] sm:h-[280px] flex flex-col"
             >
-              <h2 className="text-sm font-semibold text-zinc-300 mb-4">Revenue by Region</h2>
+              <h2 className="text-xs sm:text-sm font-semibold text-zinc-300 mb-4">Revenue by Region</h2>
               <div className="flex-1 w-full min-h-0">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={regionData} margin={{ top: 0, right: 0, left: -25, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#27272a" />
-                    <XAxis dataKey="name" stroke="#52525b" fontSize={11} tickLine={false} axisLine={false} />
-                    <YAxis stroke="#52525b" fontSize={11} tickLine={false} axisLine={false} tickFormatter={(v) => `$${v}`} />
-                    <Tooltip cursor={{fill: '#27272a', opacity: 0.4}} contentStyle={{ backgroundColor: '#18181b', border: '1px solid #27272a', borderRadius: '8px', fontSize: '12px' }} />
-                    <Bar dataKey="revenue" fill="#818cf8" radius={[4, 4, 0, 0]} barSize={30} />
+                    <XAxis dataKey="name" stroke="#52525b" fontSize={10} tickLine={false} axisLine={false} />
+                    <YAxis stroke="#52525b" fontSize={10} tickLine={false} axisLine={false} tickFormatter={(v) => `$${v}`} />
+                    <Tooltip cursor={{fill: '#27272a', opacity: 0.4}} contentStyle={{ backgroundColor: '#18181b', border: '1px solid #27272a', borderRadius: '8px', fontSize: '10px' }} />
+                    <Bar dataKey="revenue" fill="#818cf8" radius={[4, 4, 0, 0]} barSize={20} />
                   </BarChart>
                 </ResponsiveContainer>
               </div>
@@ -191,20 +193,20 @@ export default function DashboardView() {
             {/* Acquisition vs Churn Composed Chart */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}
-              className="glass-panel p-5 h-[280px] flex flex-col"
+              className="glass-panel p-4 sm:p-5 h-[250px] sm:h-[280px] flex flex-col"
             >
-              <h2 className="text-sm font-semibold text-zinc-300 mb-4">Acquisition vs Churn</h2>
+              <h2 className="text-xs sm:text-sm font-semibold text-zinc-300 mb-4">Acquisition vs Churn</h2>
               <div className="flex-1 w-full min-h-0">
                 <ResponsiveContainer width="100%" height="100%">
                   <ComposedChart data={customerData} margin={{ top: 0, right: 0, left: -20, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#27272a" />
-                    <XAxis dataKey="name" stroke="#52525b" fontSize={11} tickLine={false} axisLine={false} />
-                    <YAxis stroke="#52525b" fontSize={11} tickLine={false} axisLine={false} />
-                    <Tooltip contentStyle={{ backgroundColor: '#18181b', border: '1px solid #27272a', borderRadius: '8px', fontSize: '12px' }} />
-                    <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }} />
-                    <Bar dataKey="acquired" name="Acquired" fill="#10b981" radius={[2, 2, 0, 0]} barSize={20} />
-                    <Bar dataKey="churned" name="Churned" fill="#ef4444" radius={[2, 2, 0, 0]} barSize={20} />
-                    <Line type="monotone" dataKey="net" name="Net Trend" stroke="#6366f1" strokeWidth={2} dot={{ r: 4 }} />
+                    <XAxis dataKey="name" stroke="#52525b" fontSize={10} tickLine={false} axisLine={false} />
+                    <YAxis stroke="#52525b" fontSize={10} tickLine={false} axisLine={false} />
+                    <Tooltip contentStyle={{ backgroundColor: '#18181b', border: '1px solid #27272a', borderRadius: '8px', fontSize: '10px' }} />
+                    <Legend wrapperStyle={{ fontSize: '10px', paddingTop: '10px' }} />
+                    <Bar dataKey="acquired" name="Acquired" fill="#10b981" radius={[2, 2, 0, 0]} barSize={15} />
+                    <Bar dataKey="churned" name="Churned" fill="#ef4444" radius={[2, 2, 0, 0]} barSize={15} />
+                    <Line type="monotone" dataKey="net" name="Net Trend" stroke="#6366f1" strokeWidth={2} dot={{ r: 3 }} />
                   </ComposedChart>
                 </ResponsiveContainer>
               </div>
