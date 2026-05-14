@@ -34,3 +34,8 @@ Example:
 - Don't store passwords in plain text — use bcrypt, argon2, or scrypt
 - Use parameterized queries — never string concatenation for SQL
 - Never store session tokens in localStorage — use httpOnly cookies
+
+## 📚 Comprehensive Expert Skills (READ THESE)
+> **CRITICAL:** BrainSync has pre-compiled full expert rulebooks for this project. If you are working on any of the following domains, you MUST read the corresponding `SKILL.md` file BEFORE writing code to instantly learn all proper default skills:
+
+- **project**: Read `.agent/skills/auto/project/SKILL.md`

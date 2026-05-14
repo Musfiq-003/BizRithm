@@ -1,6 +1,6 @@
 ---
 name: project
-description: "Project for BizRithm. 19 gotchas, 138 conventions."
+description: "Project for BizRithm. 19 gotchas, 122 conventions."
 domain: project
 triggers:
   - glob: "**/*"
@@ -10,7 +10,7 @@ enabled: true
 
 # Project
 
-Auto-compiled from **167 real patterns** in **BizRithm**. This skill is auto-routed to agents when working on project files.
+Auto-compiled from **151 real patterns** in **BizRithm**. This skill is auto-routed to agents when working on project files.
 
 ## ⚠️ Anti-Patterns & Gotchas
 
@@ -41,23 +41,10 @@ Auto-compiled from **167 real patterns** in **BizRithm**. This skill is auto-rou
 ## 📐 Conventions & Best Practices
 
 ### Project Conventions
-- 📐 **Version your API from day 1 (/api/v1/)** — Version your API from day 1 (/api/v1/)
-- 📐 **Use consistent response format across all endpoints** — Use consistent response format across all endpoints
-- 📐 **Implement soft delete for important data — don't hard delete without confirmation** — Implement soft delete for important data — don't hard delete without confirmation
-- 📐 **Handle timezone correctly — store UTC, display in user's timezone** — Handle timezone correctly — store UTC, display in user's timezone
-- 📐 **Make layouts responsive from the start — mobile-first approach** — Make layouts responsive from the start — mobile-first approach
-- 📐 **Disable submit button during form submission — prevent double-submit** — Disable submit button during form submission — prevent double-submit
-- 📐 **Always add empty states ("No items yet" with call-to-action)** — Always add empty states ("No items yet" with call-to-action)
-- 📐 **Always add error states with retry button — not just blank screen** — Always add error states with retry button — not just blank screen
-- 📐 **Always add loading states for async operations (skeleton, spinner)** — Always add loading states for async operations (skeleton, spinner)
-- 📐 **Test edge cases: empty input, null, boundary values, error scenarios** — Test edge cases: empty input, null, boundary values, error scenarios
-- 📐 **Each test should be independent — no shared mutable state between tests** — Each test should be independent — no shared mutable state between tests
-- 📐 **Write tests for business logic — test behavior/output, not implementation details** — Write tests for business logic — test behavior/output, not implementation details
-- 📐 **Close resources (streams, connections, handles) when done** — Close resources (streams, connections, handles) when done
-- 📐 **Debounce user input handlers (search, resize, scroll)** — Debounce user input handlers (search, resize, scroll)
-- 📐 **Use pagination for lists over 100 items** — Use pagination for lists over 100 items
-- 📐 **Implement retry logic for transient failures with exponential backoff** — Implement retry logic for transient failures with exponential backoff
-- 📐 **Return proper HTTP status codes — not 500 for everything** — Return proper HTTP status codes — not 500 for everything
+- 📐 **convention in .gitignore** — + # Auto-generated agent rules (personalized per developer)
++ .brainsync/agent-rules.md
++ 
++ # Auto-
 - 📐 **Use .dockerignore to exclude unnecessary files** — Use .dockerignore to exclude unnecessary files
 - 📐 **Use multi-stage builds to reduce image size** — Use multi-stage builds to reduce image size
 - 📐 **Use BackgroundTasks for non-blocking operations** — Use BackgroundTasks for non-blocking operations
@@ -91,6 +78,22 @@ Auto-compiled from **167 real patterns** in **BizRithm**. This skill is auto-rou
 - 📐 **Always add empty states ("No items yet" with call-to-action)** — Always add empty states ("No items yet" with call-to-action)
 - 📐 **Always add error states with retry button — not just blank screen** — Always add error states with retry button — not just blank screen
 - 📐 **Always add loading states for async operations (skeleton, spinner)** — Always add loading states for async operations (skeleton, spinner)
+- 📐 **Test edge cases: empty input, null, boundary values, error scenarios** — Test edge cases: empty input, null, boundary values, error scenarios
+- 📐 **Each test should be independent — no shared mutable state between tests** — Each test should be independent — no shared mutable state between tests
+- 📐 **Write tests for business logic — test behavior/output, not implementation details** — Write tests for business logic — test behavior/output, not implementation details
+- 📐 **Close resources (streams, connections, handles) when done** — Close resources (streams, connections, handles) when done
+- 📐 **Debounce user input handlers (search, resize, scroll)** — Debounce user input handlers (search, resize, scroll)
+- 📐 **Use pagination for lists over 100 items** — Use pagination for lists over 100 items
+- 📐 **Implement retry logic for transient failures with exponential backoff** — Implement retry logic for transient failures with exponential backoff
+- 📐 **Return proper HTTP status codes — not 500 for everything** — Return proper HTTP status codes — not 500 for everything
+- 📐 **Always wrap async/await in try/catch** — Always wrap async/await in try/catch
+- 📐 **Hash passwords with cost factor ≥12 (bcrypt) or memory ≥64MB (argon2)** — Hash passwords with cost factor ≥12 (bcrypt) or memory ≥64MB (argon2)
+- 📐 **Implement rate limiting on login endpoints to prevent brute force** — Implement rate limiting on login endpoints to prevent brute force
+- 📐 **Use constants for magic numbers and strings** — Use constants for magic numbers and strings
+- 📐 **Handle edge cases: empty arrays, empty strings, null, undefined, 0, NaN** — Handle edge cases: empty arrays, empty strings, null, undefined, 0, NaN
+- 📐 **Keep functions under 50 lines and single-responsibility** — Keep functions under 50 lines and single-responsibility
+- 📐 **Remove unused imports, variables, and dead code** — Remove unused imports, variables, and dead code
+- 📐 **Always pull before push to avoid conflicts** — Always pull before push to avoid conflicts
 
 ## 🔵 Architecture
 
@@ -119,4 +122,4 @@ mobile-app/.metadata
 mobile-app/.
 
 ---
-*Auto-generated by BrainSync 🧠 | 167 patterns | 2026-05-13*
+*Auto-generated by BrainSync 🧠 | 151 patterns | 2026-05-14*
